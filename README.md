@@ -1,12 +1,8 @@
-## Usage
+## To Run...
 
-Compile:        truffle compile
-Migrate:        truffle migrate
-Test:           truffle test
-Build Frontend: npm run build
-Run Linter:     npm run lint
-Run Dev Server: npm run dev
+1. Compile:        `truffle compile`
+2. Migrate:        `truffle migrate`
+3. Build Frontend: `npm run build`
+4. Run Dev Server: `npm run dev`
 
-## Building and the frontend
-
-First run `truffle compile`, then run `truffle migrate` to deploy the contracts onto your network of choice (default "development"). Then run `npm run dev` to build the app and serve it on http://localhost:8080
+Demo app is served on `http://localhost:8080`.
