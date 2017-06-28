@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DID-URL Registration Demo</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+</head>
+<body>
+  <h1>DID-URL Registration Demo</h1>
+  <h3>Register DID-URL pair:</h3>
+  <br><label for="did">DID:</label><input type="text" id="did" placeholder="e.g., did:trust:<uuid> => {}"></input>
+  <br><label for="url">URL:</label><input type="text" id="url" placeholder="e.g., example.com"></input>
+  <br><br><button id="register" onclick="App.register()">Register</button>
+  <br><br>
+  <h3>Retrieve URL:</h3>
+  <br><label for="registeredDID">DID:</label><input type="text" id="registeredDID" placeholder="e.g., did:trust:<uuid> => {}"></input>
+  <br><br><button id="register" onclick="App.getURL()">Retrieve</button>
+  <br><br>
+  <span id="status"></span>
+</body>
+</html>
