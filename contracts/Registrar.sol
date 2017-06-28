@@ -14,7 +14,7 @@ contract Registrar {
         return true;
     }
 
-    function getURL(string did) returns(string){
+    function getURL(string did) constant returns(string) {
         return map[did];
     }
 }
