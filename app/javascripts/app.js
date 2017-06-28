@@ -50,8 +50,12 @@ window.App = {
     Registrar.deployed().then(function(instance) {
       registrar = instance;
       return registrar.registerDIDURL(did, url, {from: account});
-    }).then(function() {
-      self.setStatus("Registration complete!");
+    }).then(function(success) {
+      if (success) {
+        self.setStatus("Registration complete!");
+      } else {
+        self.setStatus("Registration failed :(");
+      }
     }).catch(function(e) {
       console.log(e);
       self.setStatus("Error registering DID-URL pair; see log.");
