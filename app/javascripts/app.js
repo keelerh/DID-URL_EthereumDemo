@@ -49,9 +49,11 @@ window.App = {
     let registrar;
     Registrar.deployed().then(function(instance) {
       registrar = instance;
-      return registrar.registerDIDURL(did, url, {from: account});
+      return registrar.registerDIDURL.call(did, url, {from: web3.eth.coinbase});
     }).then(function(success) {
+      console.log(success)
       if (success) {
+        registrar.registerDIDURL(did, url, {from: web3.eth.coinbase});
         self.setStatus("Registration complete!");
       } else {
         self.setStatus("Registration failed :(");
@@ -72,7 +74,7 @@ window.App = {
     let registrar;
     Registrar.deployed().then(function(instance) {
       registrar = instance;
-      return registrar.getURL.call(did, {from: account});
+      return registrar.getURL.call(did, {from: web3.eth.coinbase});
     }).then(function(url) {
       if (url) {
         self.setStatus("URL: " + url);
