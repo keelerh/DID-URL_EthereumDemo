@@ -53,6 +53,7 @@ window.App = {
     }).then(function(success) {
       console.log(success)
       if (success) {
+        //console.log(web3.eth.estimateGas{web3.eth.coinbase, "0x1234abababababa"})
         registrar.registerDIDURL(did, url, {from: web3.eth.coinbase});
         self.setStatus("Registration complete!");
       } else {
